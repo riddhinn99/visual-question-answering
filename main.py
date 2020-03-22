@@ -16,10 +16,10 @@ def allowed_file(filename):
 def home():
 	return render_template('login.html')
 
-@app.route('/success/<question>,<test_image>')
-def success(question,test_image):
+@app.route('/success/<question>,<test_image>,<ans>')
+def success(question,test_image, ans):
 	test_image = 'http://127.0.0.1:5000/uploads/' + test_image
-	return render_template('Answer.html', quest=question, image=test_image)
+	return render_template('Answer.html', quest=question, image=test_image, answer_in_anspage = ans)
 
 
 @app.route('/uploads/<test_image>')
@@ -44,8 +44,8 @@ def login():
 	question = ques
 	obj = NewModel()
 	ans = obj.predict_in_class('sample_data_new/11.jpg', 'is this a car')
-	return render_template('login.html', prediction_text = ans)
-	#return redirect(url_for('success',question = ques, test_image= filename))
+	#return render_template('login.html', prediction_text = ans)
+	return redirect(url_for('success', question = ques, test_image= filename, ans = ans))
 		
 if __name__ == "__main__":
 	app.run(debug = True)

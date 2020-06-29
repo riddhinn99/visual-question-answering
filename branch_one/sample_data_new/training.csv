@@ -1,0 +1,59 @@
+Imageid,Question,Answer
+1,is this plane,yes
+1,is plane flying,no
+2,is this plane,yes
+2,is plane flying,yes
+3,is this jeep or car,jeep
+4,is this jeep ,yes
+4,is jeep yellow or red,yellow
+4,is it front side of jeep,yes
+5,is jeep black,yes
+6,what color is car,green
+6,is it front sideof car,no
+7,what color is car,red
+7,is this car or jeep,car
+8,what is color of car,white
+9,is car white,yes
+10,is bike or car,bike
+11,is car black,yes
+12,is this back side of car,yes
+13,how many cats in this picture,2
+14,is this cat,yes
+15,is cat sleeping,yes
+16,is cat sleeping,yes
+17,what is color of cat,black
+18,is cat black,no
+19,is this cat or dog,dog
+20,is dog black or white,black
+21,is dog white or black,white
+22,is this dog,yes
+23,is dog black or white,black
+24,is dog fluffy,yes
+25,is this flower,yes
+26,is this rose or lotus,rose
+27,what is flower,hibiscus
+28,is this flower,no
+29,is there single flower,no
+30,is this fruit or vegetable,fruit
+31,what fruit is this,pear
+32,what fruit is this,lemon
+33,is fruit apple,yes
+34,what fruit is this,orange
+35,is this apple,yes
+36,is this orange,no
+37,what fruit is this,apple
+38,what fruit is this,orange
+39,is this banana,no
+40,is this pear,yes
+41,is this pineapple,yes
+42,what is the body part in xray,leg
+42,is this banana,yes
+42,what fruit is this,banana
+43,is this apple,no
+44,is this strawberry,no
+45,is this strawberry,yes
+46,is this person,yes
+47,is this person male or female,female
+48,is female smiling,yes
+49,is this female,yes
+50,is male smiling,yes

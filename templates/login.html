@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+
+    <!-- Title Page-->
+    <title>VQA</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="static/css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Visual Question Answer</h2>
+                </div>
+
+                <div>
+
+                    {{prediction_text}}
+
+                </div>
+
+                <div class="card-body">
+                    <form action = "http://localhost:5000/login" method="POST" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="name">Question</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="question">
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-row">
+                            <div class="name">Upload Image</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file" id="file">
+                                    <label class="label--file" for="file">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                                <div class="label--desc">Upload your test image here. Max file size 50 MB</div>
+                                <img src="" id="profile-img-tag" width="200px" />
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                          <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
+                       </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+		    function readURL(input) {
+		        if (input.files && input.files[0]) {
+		            var reader = new FileReader();
+		            
+		            reader.onload = function (e) {
+		                $('#profile-img-tag').attr('src', e.target.result);
+		            }
+		            reader.readAsDataURL(input.files[0]);
+		        }
+		    }
+		    $("#file").change(function(){
+		        readURL(this);
+		    });
+	</script>
+
+
+</body>
+
+</html>
+<!-- end document-->
